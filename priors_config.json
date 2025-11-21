@@ -1,0 +1,87 @@
+{
+  "piecewise_polytrope": {
+    "description": "Piecewise polytropic EoS parameterization",
+    "parameters": {
+      "log_p1": {
+        "range": [
+          33.0,
+          36.0
+        ],
+        "unit": "log10(dyn/cm^2)",
+        "description": "Log pressure at first fiducial density"
+      },
+      "gamma1": {
+        "range": [
+          1.0,
+          5.0
+        ],
+        "unit": "dimensionless",
+        "description": "First polytropic index"
+      },
+      "gamma2": {
+        "range": [
+          1.0,
+          5.0
+        ],
+        "unit": "dimensionless",
+        "description": "Second polytropic index"
+      },
+      "gamma3": {
+        "range": [
+          1.0,
+          5.0
+        ],
+        "unit": "dimensionless",
+        "description": "Third polytropic index"
+      }
+    },
+    "fiducial_densities": {
+      "rho1": {
+        "value": 0.16,
+        "unit": "GeV/fm^3"
+      },
+      "rho2": {
+        "value": 0.32,
+        "unit": "GeV/fm^3"
+      },
+      "rho3": {
+        "value": 0.96,
+        "unit": "GeV/fm^3"
+      }
+    }
+  },
+  "spectral": {
+    "description": "Spectral decomposition EoS",
+    "parameters": {
+      "n_coefficients": 4,
+      "c0": {
+        "range": [
+          0.5,
+          0.9
+        ],
+        "unit": "dimensionless",
+        "description": "Zeroth spectral coefficient"
+      },
+      "c_others": {
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "unit": "dimensionless",
+        "description": "Higher-order spectral coefficients"
+      }
+    }
+  },
+  "sampling_settings": {
+    "mcmc": {
+      "n_walkers": 32,
+      "n_steps": 5000,
+      "n_burn": 1000
+    },
+    "sbi": {
+      "num_simulations": 50000,
+      "num_rounds": 1,
+      "neural_net": "maf"
+    }
+  }
+}
