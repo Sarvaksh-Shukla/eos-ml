@@ -1,0 +1,72 @@
+{
+  "pulsar_name": "PSR J0030+0451",
+  "observation_details": {
+    "mission": "NICER",
+    "observation_id": "1200120106",
+    "exposure_time": 1500000.0,
+    "data_modes": [
+      "3C50"
+    ],
+    "analysis_method": "X-PSI"
+  },
+  "posterior_samples": {
+    "description": "Bayesian posterior samples from X-ray timing analysis",
+    "n_samples": 8000,
+    "parameters": [
+      "mass",
+      "radius",
+      "distance",
+      "hotspot_temp"
+    ],
+    "units": [
+      "M_sun",
+      "km",
+      "kpc",
+      "K"
+    ],
+    "sample_data": {
+      "mass": {
+        "mean": 1.44,
+        "std": 0.15,
+        "percentiles": {
+          "5": 1.17,
+          "16": 1.31,
+          "50": 1.44,
+          "84": 1.56,
+          "95": 1.73
+        }
+      },
+      "radius": {
+        "mean": 12.7,
+        "std": 1.1,
+        "percentiles": {
+          "5": 11.1,
+          "16": 11.9,
+          "50": 12.7,
+          "84": 13.5,
+          "95": 14.6
+        }
+      },
+      "distance": {
+        "mean": 0.325,
+        "std": 0.009,
+        "percentiles": {
+          "5": 0.309,
+          "16": 0.318,
+          "50": 0.325,
+          "84": 0.332,
+          "95": 0.342
+        }
+      }
+    }
+  },
+  "systematic_uncertainties": {
+    "instrument_calibration": 0.05,
+    "background_modeling": 0.03,
+    "atmospheric_model": 0.04
+  },
+  "references": [
+    "Riley et al. 2019, ApJL 887, L21",
+    "Miller et al. 2019, ApJL 887, L24"
+  ]
+}
